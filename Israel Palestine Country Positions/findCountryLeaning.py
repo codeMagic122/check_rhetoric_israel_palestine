@@ -2,7 +2,6 @@ import spacy
 import json
 import string
 from collections import Counter
-import pymysql
 
 nlp = spacy.load('en_core_web_sm')
 spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
