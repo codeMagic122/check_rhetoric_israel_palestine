@@ -1,1 +1,1 @@
-# check_rhetoric_israel_palestine\
+# check_rhetoric_israel_palestine
