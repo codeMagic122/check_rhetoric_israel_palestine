@@ -1,3 +1,4 @@
 # Basic Overview
-#### Speeches given by Israeli and Palestinian leaders are fed into a basic bag of words algorithm, that then generates a list of words most commonly used by the leaders of the two countries. The words in 
+#### Uses basic BOW algorithm to find patterns between a speech of your choice, and the rhetoric of the Israeli and Palestinian governments.
 ## Installing Dependencies
+pip install
