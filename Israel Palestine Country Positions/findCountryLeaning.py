@@ -23,6 +23,7 @@ def cleanUpDoc(docArg,freqCount):
     common_words = word_freq.most_common(freqCount)
 
     return([doc,common_words])
+
 def removeDuplicatesInArray(array1,array2):
     array1NoDuplicates = []
     for array1Item in array1:
@@ -36,14 +37,17 @@ def removeDuplicatesInArray(array1,array2):
             except:
                 print('failed')
     return array1NoDuplicates
+
 def printPalestineTerms():
     print("Palestine Key Terms:")
     for item in final_palestine_terms_arr:
         print(item['term'])
+        
 def printIsraelTerms():
     print("Israel Key Terms:")
     for item in final_israel_terms_arr:
         print(item['term'])
+        
 def addFrequency(val,freq):
     if(val/freq < 0.033):
         return 1
@@ -52,11 +56,13 @@ def addFrequency(val,freq):
     if(val/freq < 0.1):
         return 5
     return 10
+
 def itemInArray(val,arr,totalFreq):
     for item in arr:
         if item['term'] == val:
             return addFrequency(int(item['frequency']),totalFreq)
     return False
+
 def finalCountryLeaning():
     if(palestineSimilarity > israelSimilarity):
         print("Palestine Supporter")
@@ -66,19 +72,23 @@ def finalCountryLeaning():
         print("Israel Supporter")
         print(israelSimilarity)
         print(palestineSimilarity)
+        
 def commonTerms(arr):
     finalArray = []
     for item in arr:
         finalArray.append({"term":item[0], "frequency":item[1]})
     return finalArray
+
 def getTotalFreq(arr):
     frequency = 0
     for item in arr:
         frequency += int(item['frequency'])
     return frequency
+
 def convertFile(fileName):
     file1 = nlp(open(fileName, "r").read())
     return file1
+
 def updatePalestineSimlarity():
     similarity = 0
     for item in finalCleanedFile:
@@ -86,6 +96,7 @@ def updatePalestineSimlarity():
         if inArray != False:
             similarity += inArray
     return similarity
+
 def updateIsraelSimilarity():
     similarity = 0
     for item in finalCleanedFile:
