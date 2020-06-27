@@ -4,3 +4,5 @@
 ```
 pip install spacy json collections
 ```
+## Updating Training Data & Speech
+#### Before executing code, update the speech that will be checked in the 'speechToCheck.txt' file. Afterwards, increase accuracy and efficacy by adding more speeches delivered by Israel and Palestine in their respective '.txt' files
