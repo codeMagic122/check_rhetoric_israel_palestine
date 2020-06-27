@@ -113,7 +113,7 @@ fileToCheck_doc = convertFile("speechToCheck.txt")
 # Tokenize and Clean Up Docs
 common_palestine_terms_arr = commonTerms(cleanUpDoc(palestine_doc,patternLength)[1])
 common_israel_terms_arr = commonTerms(cleanUpDoc(israel_doc,patternLength)[1])
-finalCleanedFile = commonTerms(cleanUpDoc(fileToCheck_doc,patternLength)[1])
+finalCleanedFile = commonTerms(cleanUpDoc(fileToCheck_doc,len(fileToCheck_doc))[1])
 
 # Remove Terms Used By Israelis and Palestinians
 final_palestine_terms_arr = removeDuplicatesInArray(common_palestine_terms_arr,common_israel_terms_arr)
